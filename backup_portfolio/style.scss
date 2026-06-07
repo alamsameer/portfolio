@@ -1,0 +1,337 @@
+@import url("https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Source+Code+Pro&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+$main-color: rgb(18, 134, 138);
+$font-family-main: 'Mochiy Pop One', sans-serif;
+$font-family-regular: 'Source Code Pro', monospace;
+h1,h2{
+  font-family: $font-family-main;
+}
+p{
+  font-family: $font-family-regular;
+}
+
+@mixin border($size, $color) {
+  border: $size solid $color;
+}
+body {
+  color: white;
+  background-color: rgb(23, 22, 34);
+  line-height: 1.4rem;
+}
+.social-anmi {
+  animation: upDown 5000ms infinite;
+  animation-timing-function: ease-in-out;
+}
+.banner{
+  max-width: 40rem;
+   font-size: 1.3rem;
+    line-height: 1.7rem;
+     text-align: center;
+}
+@keyframes upDown {
+  from {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(2px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  75% {
+    transform: translateY(-2px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.show {
+  transform: translateX(8%);
+}
+header {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  aside {
+    position: relative;
+    height: 100%;
+    width: fit-content;
+    padding: 4rem 0.4rem;
+    transform: translateX(-100%);
+    transition: transform 1000ms;
+    .ham {
+      position: fixed;
+      left: 100%;
+      top: 1rem;
+    }
+    .nav_items {
+      position: relative;
+      // background-color: yellow;
+      .tag {
+        position: absolute;
+        color: white;
+        top: 1rem;
+        right: -2.2rem;
+        padding: 0.3rem 0;
+        visibility: hidden;
+        border-bottom: 2px solid $main-color;
+        transition: visibility 300ms ease-out;
+      }
+      &:hover .tag {
+        visibility: visible;
+      }
+    }
+    .nav_items1 {
+      position: relative;
+      // background-color: yellow;
+      .tag1 {
+        position: absolute;
+        color: white;
+        top: 1rem;
+        right: -3rem;
+        padding: 0.3rem 0;
+        visibility: hidden;
+        border-bottom: 2px solid rgb(33, 184, 189);
+        transition: visibility 600ms ease-in;
+      }
+      &:hover .tag1 {
+        visibility: visible;
+      }
+    }
+    .nav_items2 {
+      position: relative;
+      // background-color: yellow;
+      .tag2 {
+        position: absolute;
+        color: white;
+        top: 1rem;
+        right: -2.2rem;
+        padding: 0.3rem 0;
+        visibility: hidden;
+        border-bottom: 2px solid rgb(33, 184, 189);
+        transition: visibility 600ms ease-in;
+      }
+      &:hover .tag2 {
+        visibility: visible;
+      }
+    }
+    .nav_items3 {
+      position: relative;
+      .tag3 {
+        position: absolute;
+        color: white;
+        top: 1rem;
+        padding: 0.3rem 0;
+        right: -2.8rem;
+        visibility: hidden;
+        border-bottom: 2px solid rgb(33, 184, 189);
+        transition: visibility 600ms ease-in;
+      }
+      &:hover .tag3 {
+        visibility: visible;
+      }
+    }
+    span {
+      color: white;
+      display: block;
+      padding: 0.8rem 0.6rem;
+      transition: font-size 500ms, color 1000ms;
+      &:hover {
+        color: $main-color;
+        font-size: 1.2rem;
+      }
+    }
+
+    .contact-container {
+      position: absolute;
+      bottom: 2rem;
+    }
+  }
+  .intro-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .intro-pic {
+      width: 12rem;
+      position: relative;
+      margin-top: 3rem;
+      img {
+        width: 100%;
+        border-radius: 0.2rem;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 98%;
+        background: $main-color;
+        opacity: 0.6;
+        transition: opacity 1000ms ease-in-out;
+        border-radius: 0.2rem;
+      }
+      &:hover::before {
+        content: "";
+        opacity: 0;
+      }
+    }
+    .intro {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1rem;
+      padding: 1rem;
+      gap: 1rem;
+      h1 {
+        font-size: 2rem;
+        word-spacing: 0.4rem;
+        letter-spacing: 0.2rem;
+        span {
+          font-size: 2.4rem;
+          background: linear-gradient(to right, #0ed2f7, rgb(238, 36, 80));
+          background-clip: text;
+          color: transparent;
+          -webkit-text-fill-color: transparent;
+          -webkit-background-clip: text;
+          background: whatever;
+          color: $main-color;
+        }
+      }
+    }
+  }
+}
+
+.projects {
+  padding: 2rem;
+  h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: $main-color;
+  }
+
+  .project-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    .project {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 1.5rem;
+      border-radius: 0.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      transition: transform 300ms ease-in-out, background-color 300ms ease-in-out;
+
+      &:hover {
+        background-color: rgba(18, 134, 138, 0.8);
+        transform: translateY(-5px);
+      }
+
+      .project-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h3 {
+          font-size: 1.6rem;
+          font-weight: bold;
+          color: white;
+        }
+
+        p {
+          font-size: 1rem;
+          color: white;
+          margin-bottom: 0;
+        }
+      }
+
+      .project-status {
+        font-size: 1rem;
+        font-weight: bold;
+        color: white;
+        padding: 0.4rem 0.8rem;
+        border-radius: 0.3rem;
+        text-align: center;
+        width: fit-content;
+
+        &.live {
+          background-color: lightgreen;
+        }
+
+        &.working {
+          background-color: yellow;
+          color: black;
+        }
+
+        &.aborted {
+          background-color: red;
+        }
+      }
+
+      .project-links {
+        display: flex;
+        gap: 1rem;
+
+        a {
+          color: white;
+          font-size: 1.5rem;
+          transition: color 200ms;
+
+          &:hover {
+            color: $main-color;
+          }
+
+          i {
+            transition: transform 200ms;
+            &:hover {
+              transform: scale(1.2);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .project-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .project {
+      width: 48%;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .project-container {
+    .project {
+      width: 60%;
+    }
+  }
+}
+
+
+@media screen and (min-width: 620px) {
+  .banner{
+    font-size: 1.8rem;
+  }
+  header {
+    aside {
+      transform: translateX(8%);
+      .ham {
+        display: none;
+      }
+    }
+  }
+}

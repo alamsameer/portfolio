@@ -1,0 +1,2 @@
+
+supabseUrl=postgresql://postgres:xCyELSM2mU4IjXWF@db.ejmwnmdvplivqyewbiok.supabase.co:5432/postgres

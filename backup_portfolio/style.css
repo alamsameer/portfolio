@@ -1,0 +1,406 @@
+@import url("https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Source+Code+Pro&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+h1, h2 {
+  font-family: "Mochiy Pop One", sans-serif;
+}
+ 
+p {
+  font-family: "Source Code Pro", monospace;
+}
+
+body {
+  color: white;
+  background-color: #171622;
+  line-height: 1.4rem;
+}
+
+.social-anmi {
+  -webkit-animation: upDown 5000ms infinite;
+          animation: upDown 5000ms infinite;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+.navbar{
+  padding: 1rem;
+}
+.logo {
+width:24px;
+height:24px;
+border-radius:50%;
+
+}
+.intro{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: .7rem;
+}
+@media screen and (min-width: 768px) {
+  .intro {
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.banner {
+  max-width: 40rem;
+  font-size: 1rem;
+  text-align: center;
+}
+header .intro-info .intro h1{
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+header .intro-info .intro h1 span {
+  font-size: 1.4rem;
+  background: -webkit-gradient(linear, left top, right top, from(#0ed2f7), to(#ee2450));
+  background: linear-gradient(to right, #0ed2f7, #ee2450);
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background: whatever;
+  color: #12868a;
+}
+
+@media screen and (min-width: 768px) {
+  header .intro-info .intro h1{
+    font-size: 2rem;
+
+  }
+  header .intro-info .intro h1 span {
+    font-size: 2rem;
+  }
+  .banner {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+  }
+}
+
+@-webkit-keyframes upDown {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  25% {
+    -webkit-transform: translateY(2px);
+            transform: translateY(2px);
+  }
+  50% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  75% {
+    -webkit-transform: translateY(-2px);
+            transform: translateY(-2px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes upDown {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  25% {
+    -webkit-transform: translateY(2px);
+            transform: translateY(2px);
+  }
+  50% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  75% {
+    -webkit-transform: translateY(-2px);
+            transform: translateY(-2px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+.show {
+  -webkit-transform: translateX(8%);
+          transform: translateX(8%);
+}
+
+header {
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+/*  */
+aside{
+  position: fixed;
+  bottom: 0;
+  z-index: 9999;
+}
+
+
+header aside span {
+  color: white;
+  display: block;
+  padding: 0.8rem 0.2rem;
+  -webkit-transition: font-size 500ms, color 1000ms;
+  transition: font-size 500ms, color 1000ms;
+}
+@media screen and (min-width: 768px) {
+  header aside span {
+    padding: 0.8rem 0.8rem;
+  }
+}
+
+header aside span:hover {
+  color: #12868a;
+  font-size: 1.2rem;
+}
+
+
+header aside .contact-container {
+  position: absolute;
+  bottom: 2rem;
+  padding: 0.8rem 0.6rem;
+}
+
+.header-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #171622;
+  width: 100%;
+  z-index: 1000;
+}
+
+@media screen and (min-width: 768px) {
+  .header-container {
+    margin: 0 auto;
+    width: 70%;
+    padding: 5rem 4rem;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+  }
+}
+
+
+
+
+.projects {
+  padding: 2rem;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+}
+.project-binder {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+@media screen and (min-width: 768px) {
+  .project-binder {
+    width: 50%;
+  }
+}
+.projects h2 {
+  font-size: 1rem;
+  /* margin-bottom: 1.5rem; */
+  text-align: left;
+  color: rgb(18, 134, 138);
+}
+
+.project-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.project {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: .6rem;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: .6rem;
+  transition: transform 300ms ease-in-out, background-color 300ms ease-in-out;
+}
+
+.project:hover {
+  box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.7); /* Thin light at the bottom-right */
+  transform: translateY(-5px);
+}
+
+.project-info-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-info h3 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: white;
+}
+
+.project-info p {
+  font-size: 1rem;
+  color: white;
+  margin-bottom: 0;
+}
+
+
+.project-status {
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.3rem;
+  text-align: center;
+  width: fit-content;
+}
+
+.project-status.live {
+  background: rgba(144, 238, 144, 0.2); /* Light green with transparency */
+  border: 1px solid rgba(144, 238, 144, 0.5); /* Slightly darker border */
+  backdrop-filter: blur(10px); /* Blur effect for glassmorphism */
+  -webkit-backdrop-filter: blur(10px); /* For Safari support */
+  border-radius: 1rem;
+  font-family: "Mochiy Pop One", sans-serif;
+  color: white;
+  text-align: center;
+  width: fit-content;
+  font-size: .6rem;
+  padding: .2rem .4rem;
+}
+
+
+.project-status.working {
+  background-color: yellow;
+  color: black;
+}
+
+.project-status.aborted {
+  background-color: red;
+}
+
+.project-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.project-links a {
+  color: white;
+  font-size: 1.5rem;
+  transition: color 200ms;
+}
+
+.project-links a:hover {
+  color: rgb(18, 134, 138);
+}
+
+.project-links i {/* Set the size of the icon */
+  font-size: 1rem;
+  transition: transform 200ms;
+}
+
+.project-links i:hover {
+  transform: scale(1.2); /* Slightly enlarge the icon on hover */
+}
+
+@media screen and (min-width: 768px) {
+  .project-container {
+    width: 100%;
+  }
+
+}
+
+
+
+.project-sample-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background-color: #f9f9f9;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+}
+
+.full-image-container {
+  width: 100%;
+  height: 0;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  overflow: hidden;
+  position: relative;
+}
+
+.full-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.5s ease;
+}
+
+.thumbnail-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  display: flex;
+  justify-content: space-around;
+  visibility: hidden;
+  transition: visibility 0.5s ease, height 0.5s ease;
+}
+
+.thumbnail {
+  width: 30%;
+  height: auto;
+  object-fit: cover;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.thumbnail:hover {
+  opacity: 1;
+}
+
+.project-sample-container:hover .thumbnail-container {
+  height: 30%;
+  visibility: visible;
+}
+
+/* .project-sample-container:hover .full-image-container {
+  padding-top: 70%;
+} */
+
+.project-container:hover .full-image {
+  opacity: 0.7;
+}
